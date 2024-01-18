@@ -4,4 +4,4 @@ This project contains images organized in a grid and makes use of adaptive desig
 
 A video presenting the project: https://drive.google.com/file/d/1lpz5XBShI5kTP9ZAa1Q4bTtaJ6obvawy/view?usp=sharing
 
-Github Pages: https://adiyonu.github.io/around-the-us/
+Github Pages: https://adiyonu.github.io/se_project_aroundtheus/
