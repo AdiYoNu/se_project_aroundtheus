@@ -16,6 +16,9 @@
   .footer {
     margin-top: 48px;
     margin-bottom: 36px;
+    max-width: calc(100% - 38px);
+    margin-right: 19px;
+    margin-left: 19px;
   }
 
   .footer__text {

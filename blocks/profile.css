@@ -103,6 +103,9 @@
 @media screen and (max-width: 620px) {
   .profile {
     flex-direction: column;
+    max-width: calc(100% - 38px);
+    margin-right: 19px;
+    margin-left: 19px;
   }
 
   .profile__info {
