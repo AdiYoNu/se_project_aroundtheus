@@ -108,6 +108,31 @@
         <p class="footer__text">&#169; Adi Nudelman</p>
       </footer>
     </div>
+    <div class="modal">
+      <div class="modal__container">
+        <button class="modal__close-button"></button>
+        <p class="modal__heading">Edit profile</p>
+        <form class="modal__form">
+          <label for="title"></label>
+          <input
+            type="text"
+            name="title"
+            class="modal__input"
+            id="title"
+            placeholder="Jacques Cousteau"
+          />
+          <label for="description"></label>
+          <input
+            type="text"
+            name="description"
+            class="modal__input"
+            id="description"
+            placeholder="Explorer"
+          />
+          <button type="submit" class="modal__save-button">Save</button>
+        </form>
+      </div>
+    </div>
     <script src="./scripts/index.js"></script>
   </body>
 </html>
