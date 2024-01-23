@@ -6,10 +6,15 @@
   bottom: 0;
   z-index: 999;
   background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
   padding: 0 19px;
+  display: none;
+}
+
+.modal_opened {
+  display: flex;
 }
 
 .modal__container {
@@ -114,7 +119,9 @@ input::placeholder {
 
   .modal__close-button {
     position: absolute;
-    left: calc(100% - 40px);
+    width: 26px;
+    height: 26px;
+    left: calc(100% - 26px);
   }
 
   .modal__heading {
@@ -136,6 +143,10 @@ input::placeholder {
     font-size: 14px;
   }
   input::placeholder {
+    font-size: 14px;
+  }
+
+  .modal__save-button {
     font-size: 14px;
   }
 }
