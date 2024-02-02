@@ -114,6 +114,7 @@ input::placeholder {
 @media screen and (max-width: 620px) {
   .modal__container {
     max-width: 282px;
+    padding: 25px 22px;
   }
 
   .modal__close-button {
@@ -123,9 +124,6 @@ input::placeholder {
 }
 
 @media screen and (max-width: 320px) {
-  .modal__container {
-    padding: 25px 22px;
-  }
   .modal__close-button {
     width: 26px;
     height: 26px;
