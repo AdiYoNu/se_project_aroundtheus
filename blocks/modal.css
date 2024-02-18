@@ -118,7 +118,7 @@ input::placeholder {
   opacity: 0.8;
 }
 
-.modal__container_type_preview {
+.modal_type_preview {
   background-color: transparent;
   max-width: 75vw;
   max-height: 75vh;
