@@ -81,6 +81,7 @@ function handleAddCardSubmit(e) {
   const name = cardTitleInput.value;
   const link = cardUrlInput.value;
   renderCard({ name, link });
+  addCardForm.reset();
   closeModal(addCardModal);
 }
 
@@ -114,13 +115,13 @@ function getCardElement(cardData) {
 
 // Event Listeners
 
-profileEditBtn.addEventListener("click", () => openModal(profileEditModal));
-
-editCloseBtn.addEventListener("click", () => {
-  closeModal(profileEditModal);
+profileEditBtn.addEventListener("click", () => {
+  openModal(profileEditModal);
   profileTitleInput.value = profileTitle.textContent;
   profileDescriptionInput.value = profileDescription.textContent;
 });
+
+editCloseBtn.addEventListener("click", () => closeModal(profileEditModal));
 
 addNewCardButton.addEventListener("click", () => openModal(addCardModal));
 
