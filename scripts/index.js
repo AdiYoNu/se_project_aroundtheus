@@ -35,6 +35,7 @@ const previewImageModal = document.querySelector("#image-preview-modal");
 const profileEditForm = document.forms["profileEditForm"];
 const addCardForm = document.forms["addCardForm"];
 const cardListEl = document.querySelector(".cards__list");
+const modals = document.querySelectorAll(".modal");
 
 //buttons
 const profileEditBtn = document.querySelector("#profile-edit-btn");
@@ -135,13 +136,24 @@ profileEditBtn.addEventListener("click", () => {
   profileDescriptionInput.value = profileDescription.textContent;
 });
 
-editCloseBtn.addEventListener("click", () => closeModal(profileEditModal));
+// editCloseBtn.addEventListener("click", () => closeModal(profileEditModal));
 
 addNewCardButton.addEventListener("click", () => openModal(addCardModal));
 
-addCloseBtn.addEventListener("click", () => closeModal(addCardModal));
+// addCloseBtn.addEventListener("click", () => closeModal(addCardModal));
 
-previewCloseBtn.addEventListener("click", () => closeModal(previewImageModal));
+// previewCloseBtn.addEventListener("click", () => closeModal(previewImageModal));
+
+modals.forEach((modal) => {
+  modal.addEventListener("click", (e) => {
+    if (
+      e.target.classList.contains("modal") ||
+      e.target.classList.contains("modal__close-button")
+    ) {
+      closeModal(modal);
+    }
+  });
+});
 
 // Event handlers
 
