@@ -57,11 +57,13 @@ const cardPreviewImageTitle = document.querySelector(".modal__image-title");
 
 // functions
 function openModal(modal) {
-  modal.classList.add("modal_opened");
+  modal.classList.add("modal__opened");
+  document.addEventListener("keyup", handleEsc);
 }
 
 function closeModal(modal) {
-  modal.classList.remove("modal_opened");
+  modal.classList.remove("modal__opened");
+  document.removeEventListener("keyup", handleEsc);
 }
 
 function renderCard(cardData) {
@@ -111,6 +113,18 @@ function getCardElement(cardData) {
   cardImageEl.alt = cardData.name;
   cardTitleEl.textContent = cardData.name;
   return cardElement;
+}
+
+function handleEsc(e) {
+  e.preventDefault();
+  isEscEvent(e, closeModal);
+}
+
+function isEscEvent(e, action) {
+  const openedModal = document.querySelector(".modal__opened");
+  if (e.key === "Escape") {
+    action(openedModal);
+  }
 }
 
 // Event Listeners
