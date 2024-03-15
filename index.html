@@ -46,7 +46,7 @@
       <div class="modal__container">
         <button class="modal__close-button" id="edit-close-btn"></button>
         <p class="modal__heading">Edit profile</p>
-        <form class="modal__form" id="profileEditForm">
+        <form class="modal__form" id="profileEditForm" novalidate>
           <label for="profile-title-input"></label>
           <input
             type="text"
@@ -54,7 +54,11 @@
             class="modal__input"
             id="profile-title-input"
             placeholder="Name"
+            required
+            minlength="2"
+            maxlength="40"
           />
+          <span class="modal__error" id="profile-title-input-error"></span>
           <label for="profile-description-input"></label>
           <input
             type="text"
@@ -62,7 +66,14 @@
             class="modal__input"
             id="profile-description-input"
             placeholder="description"
+            required
+            minlength="2"
+            maxlength="200"
           />
+          <span
+            class="modal__error"
+            id="profile-description-input-error"
+          ></span>
           <button type="submit" class="modal__save-button">Save</button>
         </form>
       </div>
@@ -72,7 +83,7 @@
       <div class="modal__container">
         <button class="modal__close-button" id="add-close-btn"></button>
         <p class="modal__heading">New Place</p>
-        <form class="modal__form" id="addCardForm">
+        <form class="modal__form" id="addCardForm" novalidate>
           <label for="add-card-title-input"></label>
           <input
             type="text"
@@ -80,16 +91,28 @@
             class="modal__input"
             id="add-card-title-input"
             placeholder="Title"
+            required
+            minlength="1"
+            maxlength="30"
           />
-          <label for="cad-url-input"></label>
+          <span class="modal__error" id="add-card-title-input-error"></span>
+          <label for="add-card-url-input"></label>
           <input
-            type="text"
+            type="url"
             name="url"
             class="modal__input"
             id="add-card-url-input"
             placeholder="Image link"
+            required
           />
-          <button type="submit" class="modal__save-button">Create</button>
+          <span class="modal__error" id="add-card-url-input-error"></span>
+          <button
+            type="submit"
+            class="modal__save-button modal__save-button_disabled"
+            disabled
+          >
+            Create
+          </button>
         </form>
       </div>
     </div>
@@ -119,5 +142,6 @@
     </template>
 
     <script src="./scripts/index.js"></script>
+    <script src="./scripts/validation.js"></script>
   </body>
 </html>
